@@ -1,42 +1,53 @@
-# 🧮 SORTING ALGORITHMS: Insertion Sort Using a Class
+# # ➖ Matrix Operations-Matrix Subtraction in Python
 
-This program demonstrates how to implement the **Insertion Sort algorithm** using a Python class. It allows the user to input a list of numbers, sorts them using the insertion sort technique, and displays the sorted list.
-
----
-
-## 🎯 Aim
-
-To develop a Python class with functions to:
-- Create a list of integers
-- Sort it using the **Insertion Sort** algorithm
-- Display the sorted list
+## 🎯 AIM:
+To write a Python program that reads two matrices from the user and performs matrix subtraction.
 
 ---
 
-## 🧠 Algorithm
+## 🧠 ALGORITHM:
 
-1. **Start the program**
-2. **Define a class** `InsertionSorter`
-3. Inside the class:
-   - `create_list()`:
-     - Read number of elements
-     - Store them in a list
-   - `insertion_sort()`:
-     - Iterate from the second element to the end
-     - Move elements greater than the key to one position ahead
-     - Insert the key at the correct position
-   - `print_list()`:
-     - Print the sorted list
-4. **Create an object** of the class
-5. **Call** the methods in order: `create_list()`, `insertion_sort()`, and `print_list()`
-6. **End the program**
+1. **Start**
+2. Create variables `r` and `c` for rows and columns
+3. Get the values of `r` and `c` from the user
+4. Define a function `create_matrix(n, m)` to:
+   - Prompt user for each matrix element
+   - Append each row to form a complete matrix
+5. Call the `create_matrix()` function twice to read two matrices `A` and `B`
+6. Define a loop to subtract the elements of matrix `B` from matrix `A`
+7. Store the result in a new matrix `C`
+8. Print the resulting matrix `C`
+9. **Stop**
 
 ---
 
 ## 💻 PROGRAM:
-
-ADD CODE HERE
-
+```
+  def create_matrix(n,m):
+      M=[]
+      for i in range(n):
+          row=[]
+          for j in range(m):
+              x=int(input())
+              row.append(x)
+          M.append(row)
+      return M 
+  r,c=input().split()
+  A=create_matrix(int(r),int(c))
+  B=create_matrix(int(r),int(c))
+  C=[]
+  for i in range(int(r)):
+      R=[]
+      for j in range(int(c)):
+          item=A[i][j]-B[i][j]
+          R.append(item)
+      C.append(R)
+  print(A)
+  print(B)
+  print(C)
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/be8e47ab-5e19-49c6-b862-2f98c12a8f94)
 
 ## RESULT:
+Thus, the program has been execueted successfully.
